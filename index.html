@@ -10,6 +10,7 @@
     rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+<script src="digitalclock.js"></script>
 </head>
 </head>
 <body>
@@ -23,28 +24,28 @@
                     </div>
                     <div class="time_blocks">
                         <div class="time_hours">
-                            <div class="hours">
+                            <span id="hours">
                                 10
-                            </div>
+                            </span>
                             <div class="hours_text">
                                 hours
                             </div>
                         </div>
                         <div class="time_mins">
-                            <div class="mins">
+                            <span id="mins">
                                 00
-                            </div>
+                            </span>
                             <div class="mins_text">mins</div>
                         </div>
                         <div class="time_secs">
-                            <div class="secs">
+                            <span id="secs">
                                 01
-                            </div>
+                            </span>
                             <div class="secs_text">secs</div>
                         </div>
-                        <div class="am"><span class="am_text">
+                        <span id="apm"><span class="am_text">
                             AM
-                        </span></div>
+                        </span></span>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,8 @@
             </div>
             <div class="line1"></div>
             <div class="mainb">
-                <label for="lunch">Set lunch time</label><select name="lunch" id="lunch">
+                <label for="lunch">Set lunch time</label>
+                <select name="lunch" id="lunch">
                     <option value="select_time" disabled selected>Select Time</option>
                     <option value="1 AM - 2 AM" class="op a">1 AM - 2 AM</option>
                     <option value="2 AM - 3 AM" class="op a">2 AM - 3 AM</option>
@@ -114,7 +116,8 @@
             </div>
             <div class="line1"></div>
             <div class="mainc">
-                <label for="nap">Set nap time</label><select name="nap" id="nap">
+                <label for="nap">Set nap time</label>
+                <select name="nap" id="nap">
                     <option value="select_time" disabled selected>Select Time</option>
                     <option value="1 AM - 2 AM" class="op a">1 AM - 2 AM</option>
                     <option value="2 AM - 3 AM" class="op a">2 AM - 3 AM</option>
@@ -144,7 +147,8 @@
             </div>
             <div class="line1"></div>
             <div class="maind">
-                <label for=" night">Set night time</label><select name="night" id="night">
+                <label for=" night">Set night time</label>
+                <select name="night" id="night">
                     <option value="select_time" disabled selected>Select Time</option>
                     <option value="1 AM - 2 AM" class="op a">1 AM - 2 AM</option>
                     <option value="2 AM - 3 AM" class="op a">2 AM - 3 AM</option>
@@ -174,22 +178,22 @@
             </div>
         </div>
         <div class="texta">
-            <div class="texta_text">
+            <div id="texta_text">
                 GRAB SOME HEALTHY BREAKFAST!!!
             </div>
         </div>
         <div class="textb">
-            <div class="textb_text">
+            <div id="textb_text">
                 GOOD MORNING!! WAKE UP !!
             </div>
         </div>
-        <div class="btn"><button><span>Set Alarm</span></button></div>
-        <div class="timings">
+        <div class="btn"><button onclick="settime()">Set Alarm</button></div>
+        <div class="timings" onclick="timeselection()">
             <div class="timings_text">
-                Wake Up Time : 8AM - 11AM <br> 
-                Lunch Time : 12PM - 1PM <br> 
-                Nap Time : 3PM - 4PM <br>
-                Night Time : 8PM-9AM
+                Wake Up Time : <span id="things">8AM - 11AM </span><br> 
+                Lunch Time :<span id="things"> 12PM - 1PM </span><br> 
+                Nap Time :<span id="things"> 3PM - 4PM </span><br>
+                Night Time : <span id="things">8PM-9AM</span>
             </div>
         </div>
         <div class="component_image">
