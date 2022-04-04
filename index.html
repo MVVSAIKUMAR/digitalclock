@@ -10,7 +10,6 @@
     rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-<script src="digitalclock.js"></script>
 </head>
 </head>
 <body>
@@ -42,10 +41,10 @@
                                 01
                             </span>
                             <div class="secs_text">secs</div>
-                        </div>
-                        <span id="apm"><span class="am_text">
+                        </div class="am_text">
+                        <span id="apm">
                             AM
-                        </span></span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -54,8 +53,8 @@
         </div>
         <div class="alarm">
             <div class="maina">
-                <label for="moring"><span class="wake_text">Set wake up time</span></label>
-                <select name="moring" id="moring">
+                <label for="morning"><span class="wake_text">Set wake up time</span></label>
+                <select name="morning" id="morning">
                     <option value="select_time" disabled selected>Select Time</option>
                     <option value="1 AM - 2 AM" class="op a">1 AM - 2 AM</option>
                     <option value="2 AM - 3 AM" class="op a">2 AM - 3 AM</option>
@@ -188,16 +187,11 @@
             </div>
         </div>
         <div class="btn"><button onclick="timeselection()">Set Alarm</button></div>
-        <div class="timings" onclick="settime()">
-            <div class="timings_text">
-                Wake Up Time : <span id="things">8AM - 11AM </span><br> 
-                Lunch Time :<span id="things"> 12PM - 1PM </span><br> 
-                Nap Time :<span id="things"> 3PM - 4PM </span><br>
-                Night Time : <span id="things">8PM-9AM</span>
-            </div>
+        <div id="timings">
         </div>
         <div class="component_image">
         </div>
     </div>
+    <script src="digitalclock.js"></script>
 </body>
 </html>
